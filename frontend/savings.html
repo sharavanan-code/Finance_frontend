@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FinTrack - Savings</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/savings.js" defer></script>
+</head>
+<body>
+
+     <div class="navbar">
+    <div class="logo">💰 FinTrack</div>
+    <div class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="savings.html">Savings</a>
+      <a href="debt.html">Debt</a>
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <h1>💰 Savings Tracker</h1>
+
+    <div class="card">
+      <h2>Add Savings</h2>
+      <select id="savingsType">
+        <option value="stock">Stock</option>
+        <option value="gold">Gold</option>
+        <option value="asset">Asset</option>
+      </select>
+      <input type="number" id="savingsAmount" placeholder="Amount" />
+      <input type="text" id="savingsDesc" placeholder="Description" />
+      <button onclick="addSavings()">Add</button>
+    </div>
+
+    <div class="card">
+      <h2>Total Savings</h2>
+      <p>Total: ₹<span id="totalSavings">0</span></p>
+      <ul id="savingsList"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Charts</h2>
+      <canvas id="savingsChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Download Report</h2>
+      <input type="date" id="savingsFrom" />
+      <input type="date" id="savingsTo" />
+      <button onclick="downloadSavingsPDF()">Download PDF</button>
+    </div>
+  </div>
+</body>
+</html>

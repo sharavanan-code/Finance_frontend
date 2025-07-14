@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FinTrack - Debt</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/debt.js" defer></script>
+</head>
+<body>
+
+    <div class="navbar">
+    <div class="logo">💰 FinTrack</div>
+    <div class="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="savings.html">Savings</a>
+      <a href="debt.html">Debt</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>🧾 Debt Tracker</h1>
+
+
+
+    <div class="card">
+      <h2>Add EMI</h2>
+      <input type="text" id="emiName" placeholder="EMI Name" />
+      <input type="number" id="emiAmount" placeholder="Amount" />
+      <input type="date" id="dueDate" />
+      <button onclick="addDebt()">Add</button>
+    </div>
+
+    <div class="card">
+      <h2>Total Debt</h2>
+      <p>Total: ₹<span id="totalDebt">0</span></p>
+      <ul id="debtList"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Charts</h2>
+      <canvas id="debtChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>Download Report</h2>
+      <input type="date" id="debtFrom" />
+      <input type="date" id="debtTo" />
+      <button onclick="downloadDebtPDF()">Download PDF</button>
+    </div>
+  </div>
+</body>
+</html>
